@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react'; 
+import { Link, Menu, X } from 'lucide-react'; 
 
 const Header = () => {
   // State to manage the visibility of the mobile menu
@@ -44,9 +44,10 @@ const Header = () => {
         {/* 3. Actions & Mobile Toggle */}
         <div className="flex items-center space-x-4">
           
-          {/* Connect Wallet Button */}
+          {/* Join waitlist Button */}
           <div className="header-actions hidden sm:block"> {/* Hide button on extra small screens if needed */}
-            <button 
+            <a
+              href="/waitlist"
               className="
                 bg-[#DEC05F] text-white font-semibold 
                 py-2.5 px-6 rounded-full
@@ -56,8 +57,8 @@ const Header = () => {
                 md:py-2 px-4 text-sm 
               "
             >
-              Connect Wallet
-            </button>
+              Join Waitlist
+            </a>
           </div>
           
           {/* Mobile Menu Icon (Visible only on Mobile/Tablet) */}

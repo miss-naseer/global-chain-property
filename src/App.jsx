@@ -1,31 +1,24 @@
-// src/pages/Home.js
+// src/App.js (or main entry file)
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import PropertyShowcase from './components/PropertyShowcase';
-import Benefits from './components/Benefits';
-import Demo from './components/Demo';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Waitlist from './pages/Waitlist';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
 
 
-
-const Home = () => {
+function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <HowItWorks />
-        <PropertyShowcase />
-        <Benefits />
-        <Demo />
-        <FAQ />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/waitlist" element={<Waitlist />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        {/* Add a catch-all route if needed */}
+      </Routes>
+    </Router>
   );
-};
+}
 
-export default Home;
+export default App;

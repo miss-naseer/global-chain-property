@@ -12,7 +12,6 @@ const Hero = ({ }) => {
       
       {/* Background Image Container */}
       <div className="absolute inset-0">
-        {/* Replace 'hero-bg.jpg' with the actual path to your image */}
         <img 
           src={backgroundImage} 
           alt="Modern luxury homes" 
